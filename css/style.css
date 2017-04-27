@@ -171,9 +171,7 @@ footer{
 }
 
 /* Media Queries */
-@media only screen
-(max-width: 765px)
-(min-width: 320px){
+@media(max-width: 765px){
   header #branding,
   header nav,
   header nav li,
