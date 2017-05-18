@@ -1,90 +1,138 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richerz Hotel</title>
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div id="branding">
-            <h1>
-                <a href="index.html">
-                <span class="highlight">Richerz</span> Hotel
-                </a>   
-            </h1>
-        
-        </div>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="current"><a href="rooms.html">Rooms</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Richerz Hotel</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1>
+                        <a href="index.html">
+                            <span class="highlight">Richerz</span> Hotel
+                        </a>   
+                    </h1>
 
-    <section id="newsletter">
-      <div class="container">
-        <h1>Subscribe For Exlusive Events</h1>
-        <form>
-          <input type="email" placeholder="Enter Email...">
-          <button type="submit" class="button_1">Subscribe</button>
-        </form>
-      </div>
-    </section>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="current"><a href="rooms.html">Rooms</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <section id="main">
-      <div class="container">
-        <article id="main-col">
-          <h1 class="page-title">Rooms</h1>
-          <ul id="services">
-            <li>
-              <h3>Single</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies at, vulputate id lorem. Nulla facilisi.</p>
-						  <p>Pricing: $250 - $300 per night</p>
-            </li>
-            <li>
-              <h3>Double</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies at, vulputate id lorem. Nulla facilisi.</p>
-						  <p>Pricing: $450 - $500 per night</p>
-            </li>
-            <li>
-              <h3>Family</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies at, vulputate id lorem. Nulla facilisi.</p>
-						  <p>Pricing: $600 - $700 per night</p>
-            </li>
-          </ul>
-        </article>
+        <section id="newsletter">
+            <div class="container">
+                <h1>Subscribe For Exlusive Events</h1>
+                <form>
+                    <input type="email" placeholder="Enter Email...">
+                    <button type="submit" class="button_1">Subscribe</button>
+                </form>
+            </div>
+        </section>
 
-        <aside id="sidebar">
-          <div class="dark">
-            <h3>Book</h3>
-            <form class="quote">
-  						<div>
-  							<label>Name</label><br>
-  							<input type="text" placeholder="Name">
-  						</div>
-  						<div>
-  							<label>Email</label><br>
-  							<input type="email" placeholder="Emial Address">
-  						</div>
-  						<div>
-  							<label>Room and special request</label><br>
-  							<textarea placeholder="Message"></textarea>
-  						</div>
-  						<button class="button_1" type="submit">Send</button>
-					</form>
-          </div>
-        </aside>
-      </div>
-    </section>
+        <section id="main">
+            <div class="container">
+                <article id="main-col">
+                    <h1 class="page-title">Rooms</h1>
+                    <ul id="services">
 
-    <footer>
-      <p>Vetefan</p>
-    </footer>
-  </body>
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <img src="img/hotel-1.jpeg" style="width:100%" alt="hotel-room">
+                            </div>
+
+                            <div class="mySlides fade">
+                                <img src="img/hotel-2.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlides fade">
+                                <img src="img/hotel-3.jpg" style="width:100%">
+                            </div>
+
+                        </div>
+
+                        <br>
+
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                            <span class="dot" onclick="currentSlide(3)"></span> 
+                        </div>
+
+                        <script>
+                            var slideIndex = 0;
+                            showSlides();
+
+                            function showSlides() {
+                                var i;
+                                var slides = document.getElementsByClassName("mySlides");
+                                var dots = document.getElementsByClassName("dot");
+                                for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";  
+                                }
+
+                                slideIndex++;
+                                if (slideIndex> slides.length) {slideIndex = 1}    
+                                for (i = 0; i < dots.length; i++) {
+                                    dots[i].className = dots[i].className.replace(" active", "");
+                                }
+                                slides[slideIndex-1].style.display = "block";  
+                                dots[slideIndex-1].className += " active";
+                                setTimeout(showSlides, 2000); // Change image every 2 seconds
+                            }
+                        </script>
+
+                        <li>
+                            <h3>Single</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies at, vulputate id lorem. Nulla facilisi.</p>
+                            <p>Pricing: $250 - $300 per night</p>
+                        </li>
+
+                        <li>
+                            <h3>Double</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies at, vulputate id lorem. Nulla facilisi.</p>
+                            <p>Pricing: $450 - $500 per night</p>
+                        </li>
+                        <li>
+                            <h3>Family</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies at, vulputate id lorem. Nulla facilisi.</p>
+                            <p>Pricing: $600 - $700 per night</p>
+                        </li>
+                    </ul>
+                </article>
+
+                <aside id="sidebar">
+                    <div class="dark">
+                        <h3>Book</h3>
+                        <form class="quote">
+                            <div>
+                                <label>Name</label><br>
+                                <input type="text" placeholder="Name">
+                            </div>
+                            <div>
+                                <label>Email</label><br>
+                                <input type="email" placeholder="Emial Address">
+                            </div>
+                            <div>
+                                <label>Room and special request</label><br>
+                                <textarea placeholder="Message"></textarea>
+                            </div>
+                            <button class="button_1" type="submit">Send</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <footer>
+            <p>Vetefan</p>
+        </footer>
+    </body>
 </html>
