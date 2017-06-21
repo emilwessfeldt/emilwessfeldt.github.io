@@ -90,13 +90,13 @@ header a:hover{
 /* Showcase */
 #showcase{
     min-height:400px;
-    background:url('../img/aussenansicht-im-winter.jpg') no-repeat 0 -400px;
+    background:url('../img/U5fudJ7%20-%20Imgur.jpg') no-repeat 0 -500px;
     text-align:center;
     color:#ffffff;
 }
 
 #showcase h1{
-    margin-top:100px;
+    margin-top:250px;
     font-size:55px;
     margin-bottom:10px;
 }
@@ -116,9 +116,8 @@ header a:hover{
     float:left;
 }
 
-#newsletter form {
+#newsletter h2 {
     float:right;
-    margin-top:15px;
 }
 
 #newsletter input[type="email"]{
@@ -130,6 +129,7 @@ header a:hover{
 /* Boxes */
 #boxes{
     margin-top:20px;
+    margin-left: 80px;
 }
 
 #boxes .box{
