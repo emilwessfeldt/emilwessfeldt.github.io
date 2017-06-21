@@ -271,13 +271,18 @@ footer{
         text-align: center;
         width: 100%;
     }
+    
+    #boxes {
+        margin-left: 0px;
+        
+    }
 
     header{
         padding-bottom: 20px;
     }
 
     #showcase{
-        background: url('../img/aussenansicht-im-winter.jpg') no-repeat -425px -400px;
+        background: url('../img/U5fudJ7%20-%20Imgur.jpg') no-repeat -425px -400px;
     }
 
     #showcase h1{
