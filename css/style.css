@@ -310,6 +310,12 @@ footer{
         width: 290px;
         margin-left: 0px;
     }
+    
+    #newsletter h2 {
+    float:right;
+    font-size: 18px;
+    margin-right: 35px;
+    }
 
 
 }
