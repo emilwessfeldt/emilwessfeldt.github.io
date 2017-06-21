@@ -166,6 +166,7 @@ article#main-col{
 article#main-col img{
     padding-top: 20px;
     margin-left: 10px;
+    width: 700px;
 }
 
 /* Services */
@@ -304,7 +305,11 @@ footer{
         margin-bottom: 5px;
 
     }
-
+    
+    article#main-col img{
+        width: 300px;
+        margin-left: 0px;
+    }
 
 
 }
